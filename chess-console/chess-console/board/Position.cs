@@ -1,6 +1,7 @@
-﻿namespace board
+﻿using System;
+namespace board
 {
-    public class Position
+    class Position
     {
 
         public int row { get; set; }
