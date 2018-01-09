@@ -8,12 +8,19 @@ namespace chessconsole
     {
         public static void Main(string[] args)
         {
-            Board board = new Board(8, 8);
 
-            board.addPiece(new King(board, 0), new Position(0,0));
-            board.addPiece(new Rook(board, 0), new Position(7, 0));
+            try {
+                
+                Board board = new Board(8, 8);
 
-            Screen.printBoard(board);
+                board.addPiece(new King(board, Color.Black), new Position(0, 0));
+                board.addPiece(new Rook(board, Color.White), new Position(7, 0));
+
+                Screen.printBoard(board);
+
+            } catch (BoardException e) {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

@@ -41,6 +41,7 @@
     <Compile Include="Screen.cs" />
     <Compile Include="chess\King.cs" />
     <Compile Include="chess\Rook.cs" />
+    <Compile Include="board\BoardException.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="board\" />
