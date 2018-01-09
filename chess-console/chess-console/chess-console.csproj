@@ -39,9 +39,12 @@
     <Compile Include="board\Piece.cs" />
     <Compile Include="board\Board.cs" />
     <Compile Include="Screen.cs" />
+    <Compile Include="chess\King.cs" />
+    <Compile Include="chess\Rook.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="board\" />
+    <Folder Include="chess\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

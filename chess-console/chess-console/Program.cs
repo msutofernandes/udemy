@@ -1,5 +1,6 @@
 ﻿using System;
 using board;
+using chess;
 
 namespace chessconsole
 {
@@ -7,9 +8,12 @@ namespace chessconsole
     {
         public static void Main(string[] args)
         {
-            Board b = new Board(8, 8);
+            Board board = new Board(8, 8);
 
-            Screen.printBoard(b);
+            board.addPiece(new King(board, 0), new Position(0,0));
+            board.addPiece(new Rook(board, 0), new Position(7, 0));
+
+            Screen.printBoard(board);
         }
     }
 }
