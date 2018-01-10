@@ -42,6 +42,7 @@
     <Compile Include="chess\King.cs" />
     <Compile Include="chess\Rook.cs" />
     <Compile Include="board\BoardException.cs" />
+    <Compile Include="chess\ChessPosition.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="board\" />

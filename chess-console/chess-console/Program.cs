@@ -9,18 +9,13 @@ namespace chessconsole
         public static void Main(string[] args)
         {
 
-            try {
-                
-                Board board = new Board(8, 8);
+            ChessPosition cp1 = new ChessPosition('a', 8);
+            ChessPosition cp2 = new ChessPosition('h', 1);
 
-                board.addPiece(new King(board, Color.Black), new Position(0, 0));
-                board.addPiece(new Rook(board, Color.White), new Position(7, 0));
-
-                Screen.printBoard(board);
-
-            } catch (BoardException e) {
-                Console.WriteLine(e.Message);
-            }
+            Console.WriteLine(cp1);
+            Console.WriteLine(cp1.toPosition());
+            Console.WriteLine(cp2);
+            Console.WriteLine(cp2.toPosition());
         }
     }
 }
