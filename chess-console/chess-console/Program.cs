@@ -10,14 +10,22 @@ namespace chessconsole
         {
 
             try {
-                Board board = new Board(8, 8);
+                ChessMatch match = new ChessMatch();
 
-                board.addPiece(new Rook(board, Color.Black), new Position(0, 0));
-                board.addPiece(new Rook(board, Color.Black), new Position(1, 3));
-                board.addPiece(new King(board, Color.Black), new Position(0, 2));
-                board.addPiece(new Rook(board, Color.White), new Position(3, 5));
+                while (!match.finishedMatch){
 
-                Screen.printBoard(board);
+                    Console.Clear();
+                    Screen.printBoard(match.board);
+
+                    Console.Write("Origin: ");
+                    Position origin = Screen.getChessPosition().toPosition();
+                    Console.Write("Destiny: ");
+                    Position destiny = Screen.getChessPosition().toPosition();
+
+                    match.doMovement(origin, destiny);
+                }
+
+
                 
             } catch (BoardException e) {
                 Console.WriteLine(e.Message);
