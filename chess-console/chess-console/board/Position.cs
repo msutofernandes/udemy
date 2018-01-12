@@ -8,8 +8,12 @@ namespace board
         public int column { get; set; }
 
 
-        public Position(int row, int column)
-        {
+        public Position(int row, int column) {
+            this.row = row;
+            this.column = column;
+        }
+
+        public void defineValues(int row, int column) {
             this.row = row;
             this.column = column;
         }
